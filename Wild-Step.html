@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .box {
+      padding: 50px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inconsolata", monospace;
+      font-size: 28px;
+      box-sizing: border-box;
+    }
+
+    .box:before,
+    .box:after,
+    .box {
+      perspective: 70q;
+    }
+
+    .box:before,
+    .box:after {
+      content: 'Shai Shab';
+      position: fixed;
+      padding: 6px;
+      font-size: 35px;
+      overflow: hidden;
+      box-shadow: 0 0 11q 1q #00b9ff77;
+      clip-path: inset(var(--c, 59%-59%-59%));
+      color: #bcb2a7;
+      -webkit-text-fill-color: #00000000;
+      text-shadow: 0 0, 0 42q;
+      background: #006A92;
+      animation: s.7s infinite;
+    }
+
+    .box:before {
+      color: #eaded0;
+      background: #0097D0;
+      transform: rotateX(38deg) scaleY(1.2);
+      transform-origin: 0 59%;
+      --c: -59%-59%41%;
+    }
+
+    @keyframes s {
+      to {
+        text-shadow: 0-42q, 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>
